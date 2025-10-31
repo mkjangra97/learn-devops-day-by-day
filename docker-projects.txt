@@ -62,5 +62,6 @@ Note:- Default Page ke andr hame agar changing karni hai to ham echo command ki 
 2. docker start container_name ==> Is command se Stop hue container ko Dobara star kar sakte hai.
 
 3. docker logs container_name ==> Is command se ham apne container ke logs ko read kar sakte hai. hamara container kaise chal rha hai.
+   docker logs container_name -f ==> Isko istemaal karne se hamare container ke logs Live update hote rahenge apne terminal ke upar. Exit hone ke liye CTRL+Z ka istemaal karna hoga.
 
 4. docker inspect container_name ==> Is command se ham apne docker container ki properties check kar sakte hai ki uske andr hamne konsa network allow kiya hua hai. ya kon kon se container ke sath wo attech hai.
