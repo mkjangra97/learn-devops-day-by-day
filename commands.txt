@@ -1,0 +1,79 @@
+# DAY 1 Commands
+
+1.	pwd => Present Current Direcotry
+	Result: /home/manish
+
+2.	ls => Showing Files and Directory as a List
+	ls -a => Showing Hidden Files and Directory
+	ls -l => Showing Permissions:User:Group:File and Directoy Name
+	ls -la => Hidden Files + Permissions
+
+3.	cd => Change Directory
+	cd /Desktop => Desktop
+	cd ~ => Go to Home Directory
+	cd / => Go To Root Directory
+	cd .. => Back One Step
+
+4.	mkdir => Make directory
+	mkdir new-folder/
+
+5.	rmdir > Remove Directory
+	rmdir new-folder/
+
+6.	touch => New File Bnane Ke liye
+	touch manish.txt 
+
+7.	cp => File/Folder copy karne ke liye
+	cp manish.txt /home/codeminal/Desktop
+
+8.	mv => Folder/Files ko Remove karne ke liye. 
+	Aur iska istemaal Aksar File ya Folder ka naam 
+	Change karne me bhi kiyaa jaata hai.
+
+9.	rm => File ya Folder remove karne ke liye.
+	Agar koi Folder emplty naa ho to rm ke sath -rf flag bhi lgaaya jaata hai.
+
+10.	cat => File ke Content ko Terminal par Print karne ke liye.
+
+
+###################################################
+============= DAY 2 ===============
+###################################################
+
+1.	head => File ki starting me se kuch lines print karvaane ke liye.
+	prompt ==> head -n 5 file.txt
+
+2.	tail => File ki ending me se kuch files ko print karvaane ke liye.
+	prompt ==> tail -n 5 file.txt/file.logs
+	ham tail command ko realtime me bhi istemaal kar sakte hai, uske liye hame -f flag ka istemaal karna padega.
+	prompt ==> tail -n 5 -f file.txt
+	
+3.	grep => File me se text ya pattern ko print karne ke liye.
+	prompt ==> grep "error" filename.txt
+	isko ham kisi file ke andr se data search krne ke liye bhi istemaal kar sakte hai.
+	prompt ==> tail file.txt | grep "error"
+	grep me jo ham keyword ya pattern dete hai wo case-sensitive hote hai.
+
+4.	du => Folder aur File kitna space liye hue hai uske baare me btata hai.
+	prompt ==> du -sh filename/foldername/location
+
+5.	find => System me se file/folder search karne ke liye.
+	prompt ==> find /location -name file.txt
+
+6.	df => Disk ka free space dikhata hai.
+	prompt ==> df -h ( -h flag means Human Redable )
+
+7.	top => System ki running process ke baare me jankari deta hai.
+	prompt ==> top
+	kisi specific user ki process dekhni hai to hame -U flag use karke user ka naam deta hota hai.
+	prompt ==> top -U manish
+
+8.	ps => Process ID kis kisko konsi assign hai check karne ke liye.
+	prompt => ps aux
+
+9.	kill => Kisi bhi process ko kill karne ke liye.
+	prompt ==> kill <PID>
+
+10.	chmod => Files/Folders ki permision change karne ke liye 
+	prompt ==> chmod 755 filename.txt or /location
+

@@ -1,0 +1,25 @@
+# DAY 1
+Install Docker in System => Completed
+Run Hello World using docker file => 
+a.	Sabse pahle Docker Hub me se hello-eorld pull karenge
+	sudo docker pull hello-world
+
+b.	ab isko ham run karenge =>
+	sudo run hello-world
+	( agar ham direct run command ko use kare to bhi 
+	docker docker-hub se wo file pull kar leta hai aur run karvaa deta hai.)
+
+# DAY 1 Docker Commands
+
+a.	docker ps => Dokcer ke Running Container dekhne ke liye.
+	docker ps -a => Dokcer ke Running aur Stopped dono Container dekhne ke liye.
+
+b.	docker images => Docker Images show karne ke liye, jo hamne bnaai ya download ki.
+	docker image ls => Same as Docker images command.
+
+c.	docker rm <container_id> => Docker ke Container ko remove/delete karne ke liye.
+
+d.	docker rmi <image_id> => Docker ki Images ko delete karne ke liye.
+
+
+
