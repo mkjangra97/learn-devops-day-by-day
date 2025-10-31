@@ -1,4 +1,6 @@
-# DAY 1
+###########################################
+# DAY 1 DOCKER
+###########################################
 Install Docker in System => Completed
 Run Hello World using docker file => 
 a.	Sabse pahle Docker Hub me se hello-eorld pull karenge
@@ -9,7 +11,9 @@ b.	ab isko ham run karenge =>
 	( agar ham direct run command ko use kare to bhi 
 	docker docker-hub se wo file pull kar leta hai aur run karvaa deta hai.)
 
+##########################################
 # DAY 1 Docker Commands
+##########################################
 
 a.	docker ps => Dokcer ke Running Container dekhne ke liye.
 	docker ps -a => Dokcer ke Running aur Stopped dono Container dekhne ke liye.
@@ -21,5 +25,42 @@ c.	docker rm <container_id> => Docker ke Container ko remove/delete karne ke liy
 
 d.	docker rmi <image_id> => Docker ki Images ko delete karne ke liye.
 
+##########################################
+# DAY 2 PROJECT ==> Run and Customize Nginx
+##########################################
 
+1. Pull Nginx from Docker Hub using sudo docker pull nginx
 
+2. Run Ngnix as a Container with bind port 8080:80
+   Command  => sudo docker run -d -p 8080:80 --name my-nginx nginx
+	a. 8080:80 ==> 8080 ye apni machine ka port hai aur 80 docker container jo run hoga uska port hai.
+	b. -d ==> Is flag se Container background me run ho jaata hai, taaki hamara terminal freely work karta rahe.
+	c. -p ==> Port Bind karne ke liye.
+	d. --name ==> Jo container ham Running kar rahe ho uske liye Custom Name.
+	e. nginx ==> Jo base image ham istemaal karne wale hai. jisko hamne pull kiya tha.
+	Final Output aapko http://localhost:8080 Par milega.
+
+3. Container ke andr jaane ke liye hame Execute command istemaal karna pdega.
+   Command ===> sudo docker exec -it container_name /bin/bash
+	a. -it ==> Intrective mode
+	b. /bin/bash ==> Shell ke through
+   Default Index.html ki location ==> /usr/share/nginx/html
+Note:- Default Page ke andr hame agar changing karni hai to ham echo command ki help se kar sakte hai. Otherwise recommanded way hai ki ham docker volumes ka istemaal kare. Jiski help se ham index.html
+	ko local folder se hi docker container ko assign karva sakte hai, aur jab ham usme changing karenge to Docker container me changes easily ho jayega.
+
+4. Docker Volume Concept
+	a. sabse pahle ham ek local folder bnayenge aur usme index.html ki ek file bnayenge.
+	b. ab us file ko ham docker conatiner ko assign karenge.
+	Command => sudo docker run -d -p 8081:80 --name container_name -v local_machine_folder_path:/usr/share/nginx/html nginx 
+
+##########################################
+# BONUS COMMANDS
+##########################################
+
+1. docker stop container_name ==> Is command se hamne jo docker conainer ko run kiya tha usko stop kar sakte hai. Container ko stop karne ke liye ham container_name or container_id dono ka istemaal kar sakte hai.
+
+2. docker start container_name ==> Is command se Stop hue container ko Dobara star kar sakte hai.
+
+3. docker logs container_name ==> Is command se ham apne container ke logs ko read kar sakte hai. hamara container kaise chal rha hai.
+
+4. docker inspect container_name ==> Is command se ham apne docker container ki properties check kar sakte hai ki uske andr hamne konsa network allow kiya hua hai. ya kon kon se container ke sath wo attech hai.
